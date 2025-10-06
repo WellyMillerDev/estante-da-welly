@@ -9,7 +9,7 @@ export default function Home({ISMOBILE}) {
         
             <Header_Comp ISMOBILE={ISMOBILE} />
 
-            <div className="w-75 d-flex" style={{height: 'auto', margin: '0 auto'}}>
+            <div className="d-flex justify-content-center" style={{width: '800px', height: 'auto', margin: '0 auto'}}>
 
                 <img style={{display: ISMOBILE && `none`, transform: 'scale(0.6) translate(150px, -200px) rotate(25deg)', width: `100%`, height: 'auto'}} src={'/images/pages/home/nav1.png'}/>
                 <img style={{width: `100%`, height: 'auto', transform: ISMOBILE && `translateY(-70px) scale(1.40)`}} src={'/images/pages/home/bem-vindo.png'}/>
