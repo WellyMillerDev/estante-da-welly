@@ -9,6 +9,7 @@
 .board-mb {
     background: url("/images/pages/livros/mobile_board.png") center no-repeat;
     background-size: contain ;
+    z-index: -1;
     position: relative;
     overflow-x: hidden;
     overflow-y: hidden;

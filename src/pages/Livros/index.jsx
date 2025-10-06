@@ -73,7 +73,7 @@ export default function Livros({ISMOBILE}) {
                         </div>
                     </div>
                 ) : (
-                    <div className="d-flex flex-column justify-content-center align-items-center board-mb" style={{width: `100vw`, height: `auto`, marginTop: `2vh`, transform: `translateY(-230px)`, position: 'relative'}}>
+                    <div className="d-flex flex-column justify-content-center align-items-center board-mb" style={{width: `100vw`, height: `auto`, marginTop: `2vh`, transform: `translateY(-200px)`, position: 'relative'}}>
 
                         <h1 style={{fontSize: `2em`, marginTop: `170px`, marginBottom: `110px`}}> LIVROS </h1>
 
