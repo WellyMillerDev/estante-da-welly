@@ -1,15 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './App.css'
 
-import { Routes, useNavigate } from 'react-router-dom'
-
 import RoutesApp from './Routes'
-
 function App() {
+
+  const [ISMOBILE, setISMOBILE] = useState(/iphone|ipad|ipod|android|windows phone/i.test(navigator.userAgent));
+
   return (
     <>
 
-      <RoutesApp />
+      <RoutesApp ISMOBILE={ISMOBILE} />
 
     </>
   )

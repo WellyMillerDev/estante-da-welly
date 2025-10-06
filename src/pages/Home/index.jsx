@@ -1,91 +1,25 @@
-import React from "react";
-import { Container } from "react-bootstrap";
-import styled from "styled-components";
-import $ from "jquery";
+import Header_Comp from "../../Components/HEADER"
+import Footer_Comp from "../../Components/FOOTER"
+import { isStyledComponent } from "styled-components"
 
-// IMAGES
-import header_image from "../../assets/header.png"
-import background_image from "../../assets/bg.png"
-import subbackground_image from "../../assets/bg_bottom.png"
-
-import SMICONS_TIKTOK from "../../assets/socialmedia/tiktok.png"
-import SMICONS_INSTAGRAM from "../../assets/socialmedia/instagram.png"
-import SMICONS_BLUESKY from "../../assets/socialmedia/bluesky.png"
-import SMICONS_TWITTER from "../../assets/socialmedia/twitter.png"
-
-// ISMOBILE
-const ISMOBILE = /iphone|ipad|ipod|android|windows phone/i.test(navigator.userAgent);
-
-// SOCIAL MEDIAS
-const SOCIALMEDIAS = [
-    {
-        "ID" : 0,
-        "ICON" : SMICONS_INSTAGRAM,
-        "URL": "https://www.instagram.com/welly.escritora/"
-    },
-    {
-        "ID" : 1,
-        "ICON" : SMICONS_TWITTER,
-        "URL": "https://x.com/Bey7w7"
-    },
-    {
-        "ID" : 2,
-        "ICON" : SMICONS_TIKTOK,
-        "URL": "https://www.tiktok.com/@wellymi7"
-    },
-    {
-        "ID" : 3,
-        "ICON" : SMICONS_BLUESKY,
-        "URL": "https://bsky.app/profile/bwelly.bsky.social"
-    }
-]
-
-export default function Home() {
-
-    const SMICON_SIZE = ISMOBILE ? (.4) : (.55);
-    const SMICON_DIST = ISMOBILE ? ("10px") : ("20px");
-    const SMICON_CSS = styled.div`
-        transform: scale(${SMICON_SIZE});
-        cursor: pointer;
-        margin-bottom: ${SMICON_DIST};
-
-        &:hover {
-            transform: scale(${SMICON_SIZE+.05});
-        }  
-    `;
-
-    const openSocialMedia = (url) => {
-        return window.open(url, `_blank`)
-    }
+export default function Home({ISMOBILE}) {
 
     return (
         <>
         
-            <main className="wrapper">
-                {/* Header */}
-                <Container className="d-flex justify-content-center align-items-center w-100 mt-3">
+            <Header_Comp ISMOBILE={ISMOBILE} />
 
-                    { ISMOBILE ? (
-                        <img className="mt-3" style={{transform: `translateX(-10px)`}} width={800} src={header_image} />
-                    ) : (
-                        <img className="w-75 mt-3" src={header_image} />
-                    ) }
+            <div className="w-75 d-flex" style={{height: 'auto', margin: '0 auto'}}>
 
-                </Container>
+                <img style={{display: ISMOBILE && `none`, transform: 'scale(0.6) translate(150px, -200px) rotate(25deg)', width: `100%`, height: 'auto'}} src={'/images/pages/home/nav1.png'}/>
+                <img style={{width: `100%`, height: 'auto', transform: ISMOBILE && `translateY(-70px) scale(1.40)`}} src={'/images/pages/home/bem-vindo.png'}/>
+                <img style={{display: ISMOBILE && `none`, transform: 'scale(0.6) translate(-150px, -200px) rotate(-25deg)', width: `100%`, height: 'auto'}} src={'/images/pages/home/nav2.png'}/>
 
-                {/* Footer */}
-                <div className="fixed-bottom d-flex justify-content-center align-items-center" style={{width: `100vw`, height: `${ISMOBILE ? (`2rem`) : (`3rem`)}`, backgroundColor: "rgb(34, 34, 34)", borderTop: `${ISMOBILE ? (`5px`) : (`10px`)} solid rgb(22, 22, 22)`}}>
+            </div>
 
-                    {
-                        SOCIALMEDIAS.map((val, ind) => (
-                            <SMICON_CSS><img src={val.ICON} onClick={() => {openSocialMedia(val.URL)}} className="mb-5" /></SMICON_CSS>
-                        ))
-                    }
+            <div id="__DIVIDER" style={{backgroundImage: `url(/images/divider.png)`, backgroundSize: `contain`, width: `100vw`, height: `120px`, marginBottom: `12vh`, transform: `translateY(20px)`}}></div>
 
-                </div>
-
-
-            </main>
+            <Footer_Comp ISMOBILE={ISMOBILE} />
 
         </>
     )

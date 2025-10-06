@@ -1,0 +1,30 @@
+#HEADERCONTAINER {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background: url("../../assets/backgrounds/container_background.png") center 0px no-repeat;
+}
+
+#NAVIGATE_BTN {
+    transform: translateY(3vh);
+    filter: drop-shadow(0 0 8px black);
+
+    transition: .15s cubic-bezier(0.83, 0, 0.17, 1);
+}
+
+#NAVIGATE_BTN:hover {
+    cursor: pointer;
+    filter: drop-shadow(0 0 8px rgba(227, 136, 255, 0.644));
+    transform: translateY(3vh) scale(1.1);
+}
+
+#NAVIGATE_BTN-HEADER {
+    filter: drop-shadow(0 0 8px black);
+    transition: .15s cubic-bezier(0.83, 0, 0.17, 1);
+}
+
+#NAVIGATE_BTN-HEADER:hover {
+    cursor: pointer;
+    filter: drop-shadow(0 0 8px rgba(227, 136, 255, 0.644));
+    transform: scale(1.1);
+}

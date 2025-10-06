@@ -1,0 +1,37 @@
+.board {
+    background: url("/images/pages/livros/board.png") center no-repeat;
+    background-size: contain ;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.board-mb {
+    background: url("/images/pages/livros/mobile_board.png") center no-repeat;
+    background-size: contain ;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#BTN_COMPRAR {
+    transform: translateY(-70px) scale(0.8);
+    transition: .2s ease;
+}
+
+#BTN_COMPRAR:hover {
+    transform: translateY(-70px) scale(.85);
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.473));
+    cursor: pointer;
+}
+
+#BTN_COMPRAR-MB {
+    transform: translateY(-70px) scale(0.6);
+    transition: .2s ease;
+}
+
+#BTN_COMPRAR-MB:active {
+    transform: translateY(-70px) scale(.65);
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.473));
+    cursor: pointer;
+}
