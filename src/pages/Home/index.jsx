@@ -1,6 +1,5 @@
 import Header_Comp from "../../Components/HEADER"
 import Footer_Comp from "../../Components/FOOTER"
-import { isStyledComponent } from "styled-components"
 
 export default function Home({ISMOBILE}) {
 
