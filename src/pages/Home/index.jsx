@@ -8,10 +8,10 @@ export default function Home({ISMOBILE}) {
         
             <Header_Comp ISMOBILE={ISMOBILE} />
 
-            <div className="d-flex justify-content-center" style={{width: '800px', height: 'auto', margin: '0 auto'}}>
+            <div className="d-flex justify-content-center" style={{width: ISMOBILE ? (`100vw`) : ('800px'), height: 'auto', margin: '0 auto'}}>
 
                 <img style={{display: ISMOBILE && `none`, transform: 'scale(0.6) translate(150px, -200px) rotate(25deg)', width: `100%`, height: 'auto'}} src={'/images/pages/home/nav1.png'}/>
-                <img style={{width: `100%`, height: 'auto', transform: ISMOBILE && `translateY(-70px) scale(1.40)`}} src={'/images/pages/home/bem-vindo.png'}/>
+                <img style={{width: `100%`, height: 'auto', transform: ISMOBILE && `translateY(-70px) scale(0.8)`}} src={'/images/pages/home/bem-vindo.png'}/>
                 <img style={{display: ISMOBILE && `none`, transform: 'scale(0.6) translate(-150px, -200px) rotate(-25deg)', width: `100%`, height: 'auto'}} src={'/images/pages/home/nav2.png'}/>
 
             </div>

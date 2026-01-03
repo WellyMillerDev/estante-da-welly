@@ -9,6 +9,12 @@ export default function App() {
   const [ISMOBILE, setISMOBILE] = useState(/iphone|ipad|ipod|android|windows phone/i.test(navigator.userAgent));
   const [UPDATECHECK, setUPDATECHECK] = useState(false);
 
+  if (ISMOBILE) {
+    console.log("MOBILE DEVICE DETECTED");
+  } else {
+    console.error("DESKTOP DEVICE DETECTED");
+  }
+
   return (
     <>
 
