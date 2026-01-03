@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <!--
+    
+      '' ESTANTE DA WELLY MILLER ''
+      Site oficial para a venda de livros feita pela escritora Welly Miller, eu programei este site para lhe facilitar suas propagandas e facilitar o acesso aos seus livros
+      por seus usuários e leitores.
+      Site programado em ReactJS + Bootstrap com utilização de Render.com para servir de servidor para este site, e seu banco de dados sendo feito pela Supabase.
+
+      Espero que gostem deste site, e por ser um usuário safado por querer ver o código através do console de desenvolvedor.
+
+      Este site e escritora tem total apoio da Clooverland Studios, uma parceria completa.
+
+      ** Cloover Miller, programador, desenvolvedor líder e presidente da Clooverland Studios. **
+    
+    -->
+
+    <!-- Main Content -->
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/x-icon" href="/icon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="https://fonts.cdnfonts.com/css/jmh-typewriter-dry" rel="stylesheet"> <!-- Family: JMH Typewriter dry -->
+    <link href="https://fonts.cdnfonts.com/css/sf-espionage-heavy-2" rel="stylesheet"> <!-- Families: SF Espionage Heavy/Light/Medium -->
+    <link href="https://fonts.cdnfonts.com/css/mali" rel="stylesheet"> <!-- Family: Mali -->
+
+    <!-- Direct Injection of Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+    <title>Estante da Welly</title>
+
+    <style>
+
+      #wrapper {
+          background-color: red;
+          min-height: 100vh;
+          width: 100vw;
+          overflow-x: hidden;
+          background: 
+              url("/images/backgrounds/bg.png") center 0px no-repeat,
+              url('/images/backgrounds/bg_bottom.png') top center repeat-y;
+          background-size: 100vw auto;
+      }
+
+      #background_fade {
+          width: 100vw;
+          height: 100vh;
+          position: absolute;
+          z-index: 1;
+          background: url('/images/backgrounds/front-shadow.png') repeat-y;
+          background-size: 100vw;
+          opacity: 0.5;
+
+          display: none;
+      }
+      
+      body {
+          min-height: 100vh;
+          overflow-x: hidden;
+          background-color: black;
+      }
+
+      body, html {
+          margin: 0;
+          padding: 0;
+      }
+      
+    </style>
+    
+  </head>
+  <body>
+    <div id="background_fade"></div>
+    <div id="wrapper" class="d-flex flex-column"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

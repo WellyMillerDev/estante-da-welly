@@ -1,0 +1,10 @@
+.return-to-home-text {
+    font-size: 26px;
+    transition: 0.5s ease;
+}
+
+.return-to-home-text:hover {
+    color: gold;
+    cursor: pointer;
+    font-size: 30px;
+}
